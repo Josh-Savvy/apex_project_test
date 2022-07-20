@@ -1,0 +1,31 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translate(50px, 100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn .5s ease-in forwards;
+}
+.animate-fadeIn2 {
+  animation: fadeIn2 .5s ease-in forwards;
+}
