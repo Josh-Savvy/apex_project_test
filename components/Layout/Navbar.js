@@ -1,6 +1,18 @@
 import Link from "next/link";
+import { slide as Menu } from 'react-burger-menu'
 
-export const Navbar = () => {
+const Navbar = () => {
+  const SideBar = () => {
+    // e.preventDefault();
+    return (
+      <Menu>
+        <a id="demo" className="menu-item" href="/">Demo</a>
+        <a id="about" className="menu-item" href="/about">About</a>
+        <a id="contact" className="menu-item" href="/contact">Contact</a>
+      </Menu>
+    );
+  }
+
   return (
     <>
       <nav
@@ -8,7 +20,7 @@ export const Navbar = () => {
         style={{ zIndex: 10 }}
       >
         <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <Link href="/" className="flex items-center">
+          <Link href="/" >
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-orange-500 cursor-pointer md:ml-0 ml-4">
               Apex
             </span>
@@ -60,65 +72,13 @@ export const Navbar = () => {
               </svg>
             </button>
           </div>
-          <div
-            className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
-            id="mobile-menu-4"
-          >
-            <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-              <li>
-                <Link
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                  aria-current="page"
-                >
-                  Demos
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Pages
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <SideBar />
+
+
         </div>
       </nav>
       <br />
     </>
   );
-};
-
-export const SideBar = () => {
-  return (
-    <div>
-      <>SideBar</>
-    </div>
-  );
-};
+}
+export default Navbar

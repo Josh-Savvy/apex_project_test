@@ -3,7 +3,7 @@ import Head from "next/head";
 import Router from "next/router";
 import nProgress from "nprogress";
 import Media from "react-media";
-import { Navbar } from "./Navbar";
+import  Navbar  from "./Navbar";
 import Footer from "./Footer";
 
 Router.onRouteChangeStart = (url) => nProgress.start();

@@ -91,8 +91,8 @@ const Footer = () => {
             <i className="fa fa-github cursor-pointer"></i>
           </div>
         </div>
-        <div className="border-t border-zinc-200 text-sm mx-10 mt-5 pt-5 flex justify-between text-zinc-500 gap-4 mx-20">
-          <div className="whitespace-nowrap">© Copyright 2022, All Rights Reserved</div>
+        <div className="border-t border-zinc-200 text-sm mx-10 mt-5 pt-5 flex justify-between text-zinc-500 gap-4 mx-20 lg:mx-32">
+          <div className="whitespace-nowrap">&copy; Copyright 2022, All Rights Reserved</div>
           <div className="flex justify-between gap-4">
             <span className="cursor-pointer hover:text-orange-500">Privacy Policy</span>
             <span className="cursor-pointer hover:text-orange-500">Terms & Conditions</span>
